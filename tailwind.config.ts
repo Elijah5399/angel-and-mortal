@@ -13,6 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        // this makes it so we can use the font-albert tailwind class
+        albert: ["var(--font-albert)"],
+      },
     },
   },
   plugins: [],
