@@ -1,14 +1,15 @@
 import type { ReactElement } from "react";
 import Angel from "../components/angel";
 import Button from "../components/button";
+import Header from "../components/header";
 import Layout from "../components/layout";
 
 import type { NextPageWithLayout } from "./_app";
 
 const Page: NextPageWithLayout = () => {
   return (
-    <div className="flex flex-col items-center pt-24">
-      <h1 className="font-albert font-extrabold text-4xl">Angels & Mortals</h1>
+    <div className="flex flex-col items-center pt-6 md:pt-20">
+      <Header />
       <div id="buttonGroup" className="pt-4">
         <Button>Create Group</Button>
         <Button>Manage Group</Button>
