@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 // importing here so we don't need to reimport in each page
 import { Albert_Sans } from "next/font/google";
+import Head from "next/head";
 
 const albertSans = Albert_Sans({
   weight: ["100", "300", "400", "500", "600", "700", "800", "900"],
@@ -25,8 +26,13 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <main className={`${albertSans.variable} font-sans`}>
-      {getLayout(<Component {...pageProps} />)}
-    </main>
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <main className={`${albertSans.variable} font-sans`}>
+        {getLayout(<Component {...pageProps} />)}
+      </main>
+    </>
   );
 }
