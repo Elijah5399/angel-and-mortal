@@ -14,6 +14,7 @@ export default function button(btnProps: buttonProps): ReactNode {
           "font-albert text-lg font-light h-12 border-white border-solid border-2 rounded-full transition-colors duration-200 group-hover/button:border-pink-400"
         }
         style={{ width: `${btnWidth}px` }}
+        onClick={btnProps.onclickfunc ? btnProps.onclickfunc : undefined}
       >
         <div
           className={

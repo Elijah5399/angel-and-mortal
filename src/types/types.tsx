@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { MouseEventHandler, ReactNode } from "react";
 
 export type layoutProps = {
   children: ReactNode;
@@ -6,5 +6,6 @@ export type layoutProps = {
 
 export type buttonProps = {
   width?: number;
+  onclickfunc?: MouseEventHandler<HTMLButtonElement>;
   children: string;
 };
