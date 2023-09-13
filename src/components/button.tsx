@@ -15,7 +15,11 @@ export default function button(btnProps: buttonProps): ReactNode {
         }
         style={{ width: `${btnWidth}px` }}
       >
-        <div className={"transition-colors group-hover/button:text-pink-400"}>
+        <div
+          className={
+            "transition-colors group-hover/button:text-pink-400 text-white"
+          }
+        >
           {btnProps.children}
         </div>
       </button>

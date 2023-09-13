@@ -30,7 +30,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <Head>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={`${albertSans.variable} font-sans`}>
+      <main
+        className={`${albertSans.variable} font-sans selection:bg-fuchsia-600 selection:text-fuchsia-900`}
+      >
         {getLayout(<Component {...pageProps} />)}
       </main>
     </>
