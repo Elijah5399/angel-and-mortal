@@ -9,7 +9,7 @@ const Page: NextPageWithLayout = () => {
   return (
     <div className="flex flex-col items-center py-8 md:pt-20">
       <Header />
-      <div className="text-white font-albert font-bold pt-4 px-12">
+      <div className="text-white font-albert font-bold pt-4 px-12 md:px-36">
         <div className="text-center">
           <h3 className="text-2xl">How To Play</h3>
           <br />
