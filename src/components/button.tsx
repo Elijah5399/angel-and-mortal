@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import { buttonProps } from "../types/types";
+import { buttonProps } from "@/types/types";
 
-// Allow customisation of width
+// Allow customisation of width and button function
 // Text is children
 
-export default function button(btnProps: buttonProps): ReactNode {
+export default function Button(btnProps: buttonProps): ReactNode {
   // Apply the custom width if it is specified
   const btnWidth: number = btnProps.width ? btnProps.width : 200;
   return (

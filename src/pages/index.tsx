@@ -13,7 +13,7 @@ const Page: NextPageWithLayout = () => {
     <div className="flex flex-col items-center pt-6 md:pt-20">
       <Header />
       <div id="buttonGroup" className="pt-4">
-        <Button>Create Group</Button>
+        <Button onclickfunc={() => router.push("/create")}>Create Group</Button>
         <Button>Manage Group</Button>
         <Button>Join Group</Button>
         <Button>See Angel/Mortal</Button>
