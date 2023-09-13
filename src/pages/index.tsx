@@ -1,12 +1,14 @@
 import type { ReactElement } from "react";
-import Angel from "../components/angel";
-import Button from "../components/button";
-import Header from "../components/header";
-import Layout from "../components/layout";
+import Angel from "@/components/angel";
+import Button from "@/components/button";
+import Header from "@/components/header";
+import Layout from "@/components/layout";
+import { useRouter } from "next/router";
 
 import type { NextPageWithLayout } from "./_app";
 
 const Page: NextPageWithLayout = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center pt-6 md:pt-20">
       <Header />
@@ -15,7 +17,7 @@ const Page: NextPageWithLayout = () => {
         <Button>Manage Group</Button>
         <Button>Join Group</Button>
         <Button>See Angel/Mortal</Button>
-        <Button>How To Play</Button>
+        <Button onclickfunc={() => router.push("/guide")}>How To Play</Button>
       </div>
       <Angel />
     </div>

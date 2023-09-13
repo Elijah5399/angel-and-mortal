@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Header from "../components/header";
-import Angel from "../components/angel";
-import Button from "../components/button";
+import Angel from "@/components/angel";
+import Button from "@/components/button";
 import { useRouter } from "next/router";
 
 // Layout doesn't apply to this page
