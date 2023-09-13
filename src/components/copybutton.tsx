@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { copyButtonProps } from "@/types/types";
 import { FaCopy } from "react-icons/fa";
 
@@ -7,15 +7,18 @@ import { FaCopy } from "react-icons/fa";
   string to clipboard and has less y padding
 */
 
-function copyToClipboard(text: string) {
-  navigator.clipboard.writeText(text);
-}
-
 export default function CopyButton(btnProps: copyButtonProps): ReactNode {
+  const [copied, setCopied] = useState(false);
+
+  function copyToClipboard(text: string) {
+    setCopied(true);
+    navigator.clipboard.writeText(text);
+    setTimeout(() => setCopied(false), 600);
+  }
   // Apply the custom width if it is specified
   const btnWidth: number = btnProps.width ? btnProps.width : 200;
   return (
-    <div className="group/button py-1 w-fit">
+    <div className="group/button pt-1 pb-3 w-fit">
       <button
         className={
           "font-albert text-lg font-light h-12 border-white border-solid border-2 rounded-full transition-colors duration-200 group-hover/button:border-pink-400"
@@ -36,6 +39,12 @@ export default function CopyButton(btnProps: copyButtonProps): ReactNode {
           </div>
         </div>
       </button>
+      <p
+        className={`text-pink-400 absolute ${copied ? "block" : "hidden"}`}
+        style={{ width: `${btnWidth}px` }}
+      >
+        Copied!
+      </p>
     </div>
   );
 }
