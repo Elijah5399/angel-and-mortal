@@ -26,8 +26,8 @@ const Page: NextPageWithLayout = () => {
           to manage the group.
         </p>
         <p className="py-2">
-          When all participants have joined the group, go to "Manage group"{" "}
-          {">"} "Start game"
+          When all participants have joined the group, go to &quot;Manage
+          group&quot; {">"} &quot;Start game&quot;
         </p>
         <div className="flex flex-col items-center">
           <label>Your group ID:</label>
