@@ -7,7 +7,7 @@ import type { NextPageWithLayout } from "@/pages/_app";
 
 const Page: NextPageWithLayout = () => {
   return (
-    <div className="flex flex-col items-center pt-6 md:pt-20">
+    <div className="flex flex-col items-center py-8 md:pt-20">
       <Header />
       <div className="text-white font-albert font-bold pt-4 px-12">
         <div className="text-center">
@@ -27,7 +27,7 @@ const Page: NextPageWithLayout = () => {
         <div className="text-center">
           <h3 className="text-xl">How To Use This Website</h3> <br />
         </div>
-        <div className="pb-12 font-normal mb-12 h-fit">
+        <div className="pb-8 font-normal h-fit">
           <p>1. Decide on a Group Admin</p>
           <br />
           <p>2. The Group Admin creates a group, and obtains a Group ID.</p>
@@ -45,6 +45,7 @@ const Page: NextPageWithLayout = () => {
           </p>
         </div>
       </div>
+      <Angel />
     </div>
   );
 };
