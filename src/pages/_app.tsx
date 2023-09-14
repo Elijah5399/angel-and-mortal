@@ -29,6 +29,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     <>
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <title>Angels & Mortals</title>
       </Head>
       <main
         className={`${albertSans.variable} font-sans selection:bg-fuchsia-600 selection:text-fuchsia-900`}
